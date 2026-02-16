@@ -32,6 +32,9 @@ class TranslatorRunnerMiddleware(BaseMiddleware):
 
         # базовая локаль по умолчанию
         locale = "en"
+        telegram_locale = (user.language_code or "").split("-")[0].lower()
+        if telegram_locale in {"ru", "en"}:
+            locale = telegram_locale
 
         # в случае, если запрос - это нажатие на inline-кнопку смены языка,
         # текущей локалью становится локаль нажатой кнопки
