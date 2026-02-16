@@ -1,21 +1,12 @@
-
-# i18n/locales/en/LC_MESSAGES/txt.ftl
-
-
 command-start_message =
    { $intro }
 
-
    { $body }
 
-
 card-greeting = Hello, { $username } 👋
-
-
 card-body =
    { -card-name } — { -card-role }
    { -card-tagline }
-
 
    { -section-about }
    { -bullet } { -card-about }
@@ -24,12 +15,10 @@ card-body =
       *[other] years
    }
 
-
    { -section-skills }
    { -bullet } { -card-skill-1 }
    { -bullet } { -card-skill-2 }
    { -bullet } { -card-skill-3 }
-
 
    { -section-projects } { $projects_count ->
        [one] ({ NUMBER($projects_count) } project)
@@ -39,13 +28,11 @@ card-body =
    { -bullet } { -card-project-2 }
    { -bullet } { -card-project-3 }
 
-
    { -section-contacts }
    { -bullet } { -link-email }: { -card-email }
    { -bullet } { -link-telegram }: { -card-telegram }
    { -bullet } { -link-site }: { -card-site }
    { -bullet } { -link-github }: { -card-github }
-
 
    { -section-meta }
    { -bullet } { -meta-contact-pref }: { $contact_preference ->
@@ -67,7 +54,6 @@ card-body =
        }
    { -bullet } { -meta-updated }: { DATETIME($updated_at) }
 
-
 lang-ru = { $checked ->
    [yes] ✅ Русский 🇷🇺
   *[other] Русский 🇷🇺
@@ -77,22 +63,18 @@ lang-en = { $checked ->
   *[other] English 🇬🇧
 }
 
-
 -section-about = About
 -section-skills = Skills
 -section-projects = Projects
 -section-contacts = Contacts / Links
 -section-meta = Meta
 
-
 -bullet = •
-
 
 -link-email = Email
 -link-telegram = Telegram
 -link-site = Website
 -link-github = GitHub
-
 
 -meta-contact-pref = Preferred contact
 -meta-availability = Availability
@@ -104,7 +86,6 @@ lang-en = { $checked ->
 -meta-available-any = available — any channel
 -meta-busy = not available for new work
 -meta-by-request = availability on request
-
 
 -card-name = Ivan Ivanov
 -card-role = Backend Developer
@@ -121,6 +102,3 @@ lang-en = { $checked ->
 -card-telegram = @ivan_visit
 -card-site = https://ivan-visit.dev
 -card-github = github.com/ivan-visit
-
-
-

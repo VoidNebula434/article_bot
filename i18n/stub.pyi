@@ -14,35 +14,42 @@ class TranslatorRunner:
 
 class Command:
     @staticmethod
-    def start_message(*, body: PossibleValue, intro: PossibleValue) -> Literal["""{ $intro }
+    def start_message(
+        *, body: PossibleValue, intro: PossibleValue
+    ) -> Literal[
+        """{ $intro }
 
-
-{ $body }"""]: ...
+{ $body }"""
+    ]: ...
 
 class Card:
     @staticmethod
-    def greeting(*, username: PossibleValue) -> Literal["""Hello, { $username } 👋"""]: ...
+    def greeting(
+        *, username: PossibleValue
+    ) -> Literal["""Hello, { $username } 👋"""]: ...
     @staticmethod
-    def body(*, projects_count: PossibleValue, updated_at: PossibleValue, years_exp: PossibleValue) -> Literal["""Ivan Ivanov — Backend Developer
+    def body(
+        *,
+        projects_count: PossibleValue,
+        updated_at: PossibleValue,
+        years_exp: PossibleValue,
+    ) -> Literal[
+        """Ivan Ivanov — Backend Developer
 I build reliable Python applications.
-
 
 About
 • Built systems, tested tests.
 • Experience: { $years_exp } years
-
 
 Skills
 • Python · FastAPI · AsyncIO
 • PostgreSQL · Redis · RabbitMQ
 • Docker · GitHub Actions · Very smart
 
-
 Projects ({ $projects_count } projects)
 • MyApp — my application
 • MyApp — my application
 • MyApp — my application
-
 
 Contacts / Links
 • Email: ivan.ivanov@example.com
@@ -55,7 +62,8 @@ Meta
 • Preferred contact: any channel
 • Availability:
     availability on request
-• Updated: { $updated_at }"""]: ...
+• Updated: { $updated_at }"""
+    ]: ...
 
 class Lang:
     @staticmethod

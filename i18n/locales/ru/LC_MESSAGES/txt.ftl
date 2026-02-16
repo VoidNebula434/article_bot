@@ -1,28 +1,19 @@
-
-# i18n/locales/ru/LC_MESSAGES/txt.ftl
-
-
 # здесь лежат все пользовательские тексты
 # Ключи card-* формируют содержимое карточки, а lang-* отвечает за кнопки языка.
-
 
 # главный текст ответа на /start (собирается из greeting + body)
 command-start_message =
    { $intro }
 
-
    { $body }
-
 
 # приветствие с интерполяцией имени пользователя
 card-greeting = Привет, { $username } 👋
-
 
 # основное тело карточки: секции, списки, селекторы и форматирование дат/чисел
 card-body =
    { -card-name } — { -card-role }
    { -card-tagline }
-
 
    { -section-about }
    { -bullet } { -card-about }
@@ -33,12 +24,10 @@ card-body =
       *[other] года
    }
 
-
    { -section-skills }
    { -bullet } { -card-skill-1 }
    { -bullet } { -card-skill-2 }
    { -bullet } { -card-skill-3 }
-
 
    { -section-projects } { $projects_count ->
        [one] ({ NUMBER($projects_count) } проект)
@@ -50,13 +39,11 @@ card-body =
    { -bullet } { -card-project-2 }
    { -bullet } { -card-project-3 }
 
-
    { -section-contacts }
    { -bullet } { -link-email }: { -card-email }
    { -bullet } { -link-telegram }: { -card-telegram }
    { -bullet } { -link-site }: { -card-site }
    { -bullet } { -link-github }: { -card-github }
-
 
    { -section-meta }
    { -bullet } { -meta-contact-pref }: { $contact_preference ->
@@ -78,7 +65,6 @@ card-body =
        }
    { -bullet } { -meta-updated }: { DATETIME($updated_at, dateStyle: "medium") }
 
-
 # кнопки выбора языка, в зависимости от параметра $checked будет выставлен чекбокс
 lang-ru = { $checked ->
    [yes] ✅ Русский 🇷🇺
@@ -89,9 +75,6 @@ lang-en = { $checked ->
   *[other] English 🇬🇧
 }
 
-
-
-
 # заголовки секций карточки
 -section-about = Описание
 -section-skills = Навыки
@@ -99,17 +82,14 @@ lang-en = { $checked ->
 -section-contacts = Контакты / Ссылки
 -section-meta = Дополнительно
 
-
 # маркер списка
 -bullet = •
-
 
 # подписи для ссылок
 -link-email = Email
 -link-telegram = Telegram
 -link-site = Сайт
 -link-github = GitHub
-
 
 # подписи и статусы для блока "Дополнительно"
 -meta-contact-pref = Предпочтительный канал
@@ -122,7 +102,6 @@ lang-en = { $checked ->
 -meta-available-any = доступен — любой канал
 -meta-busy = пока не беру новые задачи
 -meta-by-request = доступность по запросу
-
 
 # данные карточки
 -card-name = Иван Иванов
@@ -140,10 +119,3 @@ lang-en = { $checked ->
 -card-telegram = @ivan_visit
 -card-site = https://ivan-visit.dev
 -card-github = github.com/ivan-visit
-
-
-
-
-
-
-
